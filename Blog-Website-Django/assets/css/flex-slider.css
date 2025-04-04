@@ -1,0 +1,141 @@
+/* ====================================================================================================================
+ * FLEXSLIDER CSS
+ * ====================================================================================================================*/
+ @font-face {
+  font-family: 'flexslider-icon';
+  src: url('../fonts/flexslider-icon.eot');
+  src: url('../fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), 
+       url('../fonts/flexslider-icon.woff') format('woff'),
+       url('../fonts/flexslider-icon.ttf') format('truetype'),
+       url('../fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ====================================================================================================================
+ * BASE STYLES
+ * ====================================================================================================================*/
+.flexslider {
+  margin: 20px auto;
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.flexslider .slides img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* ====================================================================================================================
+ * NAVIGATION CONTROLS
+ * ====================================================================================================================*/
+.flex-direction-nav a {
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  opacity: 1 !important;
+}
+
+.flex-direction-nav a:before {
+  font-size: 32px;
+  color: #333;
+  text-shadow: none;
+  line-height: 50px;
+}
+
+.flex-direction-nav .flex-prev { left: 20px; }
+.flex-direction-nav .flex-next { right: 20px; }
+
+.flex-direction-nav a:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+/* ====================================================================================================================
+ * PAGINATION CONTROLS
+ * ====================================================================================================================*/
+.flex-control-nav {
+  bottom: 20px;
+  z-index: 10;
+}
+
+.flex-control-paging li a {
+  width: 14px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.7);
+  transition: all 0.2s ease;
+}
+
+.flex-control-paging li a.flex-active {
+  background: #2196F3;
+  transform: scale(1.2);
+}
+
+.flex-control-paging li a:hover {
+  background: rgba(33, 150, 243, 0.8);
+}
+
+/* ====================================================================================================================
+ * THUMBNAIL CONTROLS
+ * ====================================================================================================================*/
+.flex-control-thumbs {
+  margin: 10px 0 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.flex-control-thumbs li {
+  width: 20%;
+  padding: 5px;
+}
+
+.flex-control-thumbs img {
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.flex-control-thumbs img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ====================================================================================================================
+ * RESPONSIVE ADJUSTMENTS
+ * ====================================================================================================================*/
+@media screen and (max-width: 768px) {
+  .flex-direction-nav a {
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0;
+  }
+  
+  .flex-direction-nav a:before {
+    font-size: 24px;
+    line-height: 40px;
+  }
+  
+  .flex-control-paging li a {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .flexslider {
+    border-width: 1px;
+    border-radius: 4px;
+  }
+  
+  .flex-control-thumbs li {
+    width: 25%;
+  }
+}
